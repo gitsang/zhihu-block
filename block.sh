@@ -13,6 +13,13 @@ block() {
 }
 
 USER_IDS=(
+    "hua-ti-xiao-zhu-shou" # 话题小助手
+    "zhi-hu-yan-xiu-ban" # 知乎知学堂
+    "zhi-hu-you-xi-jun-33" # 知乎游戏君
+    "AnonymousLive" # 知乎盐选会员
+    "reseted1636191193711" # 知乎训练营
+    "zhi-hu-qi-che" # 知乎汽车
+    "zhihu-haowutuijian" # 知乎好物推荐
     "zhi-hu-cheng-chang-ji-hua" # 知乎成长计划
     "zhi-hu-dian-jing" # 知乎电竞
     "zhi-hu-mei-zhuang" # 知乎美装
