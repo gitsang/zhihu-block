@@ -13,6 +13,14 @@ block() {
 }
 
 USER_IDS=(
+    "zhi-hu-cheng-chang-ji-hua" # 知乎成长计划
+    "zhi-hu-dian-jing" # 知乎电竞
+    "zhi-hu-mei-zhuang" # 知乎美装
+    "zhi-hu-mei-shi-96" # 知乎美食
+    "zhi-hu-tu-shu-91" # 知乎图书
+    "fu-fei-zi-xun-xiao-zhu-shou" # 知乎付费咨询小助手
+    "zhi-hu-jian-kang-65" # 知乎健康
+    "zhi-hu-shang-ye" # 知乎商业
     "zhi-hu-jia-dian-34" # 知乎家电
     "chao-zan-bao-xiao-zhu-shou" # 超赞包小助手
 
