@@ -117,6 +117,13 @@ USER_IDS=(
     "zhi-hu-cheng-shi-tian-jin" # 知乎城市-天津
     "zhi-hu-cheng-shi-xi-an" # 知乎城市-西安
     "zhi-hu-zhao-pin" # 知乎范儿
+
+    # https://github.com/gitsang/zhihu-block/issues/1
+    "zhi-yun-dong-43" # 知乎运动
+    "zhi-hu-kao-yan" # 考研研习社
+    "chao-zan-bao-xiao-zhu-shou" # 超赞包小助手
+    "zhi-hu-mei-shi-96" # 知乎美食
+    "she-ji-yan-jiu-yuan-80" # AI盐究院
 )
 
 for USER_ID in ${USER_IDS[@]}; do
