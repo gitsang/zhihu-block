@@ -1,5 +1,6 @@
 #!/bin/bash
 
+# shellcheck disable=SC1091
 source .env
 
 Z_C0=${Z_C0:-}
@@ -8,7 +9,13 @@ COOKIE="z_c0=${Z_C0};"
 block() {
     USER_ID=${1}
     curl -iL -X POST \
-        https://www.zhihu.com/api/v4/members/${USER_ID}/actions/block \
+        "https://www.zhihu.com/api/v4/members/${USER_ID}/actions/block" \
+        -H "cookie: ${COOKIE}"
+}
+
+disable_weekly_report() {
+    curl -iL -X GET \
+        "https://www.zhihu.com/api/v4/creators/weekly-report/whitelist/sync-status?status=0" \
         -H "cookie: ${COOKIE}"
 }
 
@@ -30,6 +37,7 @@ USER_IDS=(
     "zhi-hu-shang-ye" # 知乎商业
     "zhi-hu-jia-dian-34" # 知乎家电
     "chao-zan-bao-xiao-zhu-shou" # 超赞包小助手
+    "shu-ju-fen-xi-gong-cheng-shi-81" # AI技能研究所
 
     # Reference: https://zhuanlan.zhihu.com/p/127021293
     "zhi-hu-14-94-58" # 知乎
@@ -126,7 +134,9 @@ USER_IDS=(
     "she-ji-yan-jiu-yuan-80" # AI盐究院
 )
 
-for USER_ID in ${USER_IDS[@]}; do
+for USER_ID in "${USER_IDS[@]}"; do
     echo "blocking ${USER_ID}"
     block "${USER_ID}"
 done
+
+disable_weekly_report
